@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float turningSpeed = 5f;
     [SerializeField] private float gravity = 9.81f;
 
+    [Header("Animations")]
+    [SerializeField]
+    private Animator _animator;
+
     private float speed;
     private float targetSpeed;
     private float verticalVelocity;
@@ -44,27 +48,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void CalculateSpeed()
     {
-        // Vérifie si le joueur est en mode sprint ou marche et ajuste la vitesse cible
+        // Vï¿½rifie si le joueur est en mode sprint ou marche et ajuste la vitesse cible
         targetSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
 
         // Lisser le passage entre les vitesses de marche et de sprint
         speed = Mathf.SmoothDamp(speed, targetSpeed, ref currentVelocity.z, accelerationTime);
+
+        
     }
 
     private void GroundMovement()
     {
-        // Obtenir la direction de déplacement relative à la caméra
+        // Obtenir la direction de dï¿½placement relative ï¿½ la camï¿½ra
         Vector3 move = new Vector3(turnInput, 0, moveInput);
         move = camera.transform.TransformDirection(move);
-        move.y = 0; // On ignore l'axe Y pour un déplacement au sol
+        move.y = 0; // On ignore l'axe Y pour un dï¿½placement au sol
 
-        // Appliquer la vitesse et la gravité
+        // Appliquer la vitesse et la gravitï¿½
         verticalVelocity = VerticalForceCalculation();
         move = move.normalized * speed;
         move.y = verticalVelocity;
+        _animator.SetFloat("forward", move.z);
 
-        // Déplacer le personnage
+        // Dï¿½placer le personnage
         controller.Move(move * Time.deltaTime);
+        
     }
 
     private void Turn()
@@ -98,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputManagement()
     {
-        // Gestion des entrées de mouvement
+        // Gestion des entrï¿½es de mouvement
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
 
