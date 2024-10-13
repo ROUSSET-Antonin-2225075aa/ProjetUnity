@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         Turn();
     }
 
-    private void CalculateSpeed()
+    /*private void CalculateSpeed()
     {
         // V�rifie si le joueur est en mode sprint ou marche et ajuste la vitesse cible
         targetSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
@@ -55,6 +55,22 @@ public class PlayerMovement : MonoBehaviour
         speed = Mathf.SmoothDamp(speed, targetSpeed, ref currentVelocity.z, accelerationTime);
 
         
+    }*/
+    private void CalculateSpeed()
+    {
+        // Si le joueur avance ou sprint, ajuster la vitesse cible
+        if (moveInput != 0)
+        {
+            targetSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
+        }
+        else
+        {
+            // Si aucune entrée, réduire progressivement la vitesse cible
+            targetSpeed = 0;
+        }
+
+        // Lisser la transition de la vitesse actuelle vers la vitesse cible
+        speed = Mathf.SmoothDamp(speed, targetSpeed, ref currentVelocity.z, accelerationTime);
     }
 
     private void GroundMovement()
@@ -68,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         verticalVelocity = VerticalForceCalculation();
         move = move.normalized * speed;
         move.y = verticalVelocity;
-        _animator.SetFloat("forward", move.z);
+        _animator.SetFloat("forward", speed);
 
         // D�placer le personnage
         controller.Move(move * Time.deltaTime);
