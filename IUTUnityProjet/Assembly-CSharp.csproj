@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Teleport\TeleportController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />
