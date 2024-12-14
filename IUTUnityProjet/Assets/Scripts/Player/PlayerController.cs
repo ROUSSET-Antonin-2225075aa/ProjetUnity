@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float sprintSpeed = 10f;
+    [SerializeField] private float lateralSpeed = 3f; // Vitesse de déplacement latéral
     [SerializeField] private float accelerationTime = 0.1f;
     [SerializeField] private float turningSpeed = 5f;
     [SerializeField] private float gravity = 9.81f;
@@ -46,26 +47,15 @@ public class PlayerMovement : MonoBehaviour
         Turn();
     }
 
-    /*private void CalculateSpeed()
-    {
-        // V�rifie si le joueur est en mode sprint ou marche et ajuste la vitesse cible
-        targetSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
-
-        // Lisser le passage entre les vitesses de marche et de sprint
-        speed = Mathf.SmoothDamp(speed, targetSpeed, ref currentVelocity.z, accelerationTime);
-
-        
-    }*/
     private void CalculateSpeed()
     {
-        // Si le joueur avance ou sprint, ajuster la vitesse cible
-        if (moveInput != 0)
+        // Ajuste la vitesse cible en fonction des entrées de mouvement
+        if (moveInput != 0 || turnInput != 0)
         {
             targetSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
         }
         else
         {
-            // Si aucune entrée, réduire progressivement la vitesse cible
             targetSpeed = 0;
         }
 
@@ -75,25 +65,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundMovement()
     {
-        // Obtenir la direction de d�placement relative � la cam�ra
-        Vector3 move = new Vector3(turnInput, 0, moveInput);
+        // Calcul de la direction de déplacement par rapport à la caméra
+        Vector3 move = new Vector3(turnInput * lateralSpeed, 0, moveInput * speed);
         move = camera.transform.TransformDirection(move);
-        move.y = 0; // On ignore l'axe Y pour un d�placement au sol
+        move.y = 0; // Ignorer l'axe Y pour un déplacement au sol
 
-        // Appliquer la vitesse et la gravit�
+        // Appliquer la gravité
         verticalVelocity = VerticalForceCalculation();
-        move = move.normalized * speed;
         move.y = verticalVelocity;
-        _animator.SetFloat("forward", speed);
 
-        // D�placer le personnage
+        // Mettre à jour l'animation en fonction de la direction du mouvement
+        _animator.SetFloat("forward", moveInput);
+        _animator.SetFloat("sideways", turnInput);
+
+        // Déplacer le personnage
         controller.Move(move * Time.deltaTime);
-        
     }
 
     private void Turn()
     {
-        if (Mathf.Abs(turnInput) > 0 || Mathf.Abs(moveInput) > 0)
+        if (Mathf.Abs(turnInput) > 0 || moveInput > 0)
         {
             // Calculer la direction actuelle de regard en fonction de la vitesse du controller
             Vector3 currentLookDirection = controller.velocity.normalized;
@@ -122,9 +113,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputManagement()
     {
-        // Gestion des entr�es de mouvement
+        // Gestion des entrées de mouvement
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
-
     }
 }
