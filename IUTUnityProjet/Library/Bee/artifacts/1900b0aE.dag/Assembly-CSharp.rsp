@@ -358,6 +358,8 @@
 "Assets/Scripts/enemie/BasicEnemy.cs"
 "Assets/Scripts/Menu/StartMenu.cs"
 "Assets/Scripts/Player/PlayerController.cs"
+"Assets/Scripts/Player/PlayerShoot.cs"
+"Assets/Scripts/projectile/Projectile.cs"
 "Assets/Scripts/Teleport/TeleportController.cs"
 "Assets/SpaceSkies Free/Demo/Scripts/LookCamera.cs"
 "Assets/SpaceSkies Free/Demo/Scripts/SkyboxChanger.cs"
