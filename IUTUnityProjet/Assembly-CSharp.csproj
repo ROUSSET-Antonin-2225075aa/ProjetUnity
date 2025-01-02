@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
     <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
     <Compile Include="Assets\Scripts\Teleport\TeleportController.cs" />
+    <Compile Include="Assets\Scripts\Particle\ParticleZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\projectile\Projectile.cs" />
     <Compile Include="Assets\Scripts\enemie\BasicEnemy.cs" />

@@ -359,6 +359,7 @@
 "Assets/Scripts/enemie/BasicEnemy.cs"
 "Assets/Scripts/Game/GameManager.cs"
 "Assets/Scripts/Menu/StartMenu.cs"
+"Assets/Scripts/Particle/ParticleZoneTrigger.cs"
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerShoot.cs"
 "Assets/Scripts/projectile/Projectile.cs"
