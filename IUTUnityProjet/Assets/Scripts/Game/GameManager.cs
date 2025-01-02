@@ -27,6 +27,6 @@ public class GameManager : MonoBehaviour
 
     private void UpdateHUD()
     {
-        coinCounterText.text = "Coins: " + coinCount;
+        coinCounterText.text = "$ " + coinCount;
     }
 }
