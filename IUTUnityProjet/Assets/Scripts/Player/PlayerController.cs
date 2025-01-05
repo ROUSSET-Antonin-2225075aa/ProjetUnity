@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float turningSpeed = 5f;
     [SerializeField] private float gravity = 9.81f;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip footstepSound; // Le son des pas
+    private AudioSource footstepSource; // Source audio pour jouer le son des pas
+
     [Header("Animations")]
     [SerializeField]
     private Animator _animator;
@@ -32,12 +36,19 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        // Ajout dynamique d'une AudioSource pour jouer le son des pas
+        footstepSource = gameObject.AddComponent<AudioSource>();
+        footstepSource.clip = footstepSound;
+        footstepSource.loop = true; // Boucle le son
+        footstepSource.playOnAwake = false;
     }
 
     private void Update()
     {
         InputManagement();
         Movement();
+        HandleFootstepSound();
     }
 
     private void Movement()
@@ -116,5 +127,25 @@ public class PlayerMovement : MonoBehaviour
         // Gestion des entrées de mouvement
         moveInput = Input.GetAxis("Vertical");
         turnInput = Input.GetAxis("Horizontal");
+    }
+
+    private void HandleFootstepSound()
+    {
+        if ((moveInput != 0 || turnInput != 0) && controller.isGrounded)
+        {
+            if (!footstepSource.isPlaying)
+            {
+                // Commence à jouer le son si ce n'est pas déjà le cas
+                footstepSource.Play();
+            }
+        }
+        else
+        {
+            if (footstepSource.isPlaying)
+            {
+                // Arrête le son si le joueur arrête de marcher
+                footstepSource.Stop();
+            }
+        }
     }
 }

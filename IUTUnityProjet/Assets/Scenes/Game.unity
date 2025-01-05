@@ -6227,6 +6227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &73515408
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6826,6 +6827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &116581141
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10173,6 +10175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &316035900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11919,6 +11922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &454648738
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12122,6 +12126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &464339008
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12325,6 +12330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &466050188
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14530,127 +14536,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bceb99c9fa1f2a4bb9692e518bec46c, type: 3}
---- !u!1 &616573921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 616573922}
-  - component: {fileID: 616573926}
-  - component: {fileID: 616573925}
-  - component: {fileID: 616573924}
-  - component: {fileID: 616573923}
-  m_Layer: 0
-  m_Name: sender (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &616573922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616573921}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0330801, y: -1.006, z: 8.554464}
-  m_LocalScale: {x: 1, y: 0.05, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1245043512}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616573923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616573921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572dc40ec46b0bb4abf820f3ab608206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1946540745}
-  destination: {fileID: 2020390235}
-  playerg: {fileID: 1946540744}
---- !u!65 &616573924
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616573921}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 32.71, z: 1}
-  m_Center: {x: 0, y: 16.73, z: 0}
---- !u!23 &616573925
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616573921}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &616573926
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616573921}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &626280871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 05fbf518f8919fe49b4ab4c6bf281034, type: 3}
@@ -15421,6 +15306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &684980265
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19781,8 +19667,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23173462, y: 0.000000034904552, z: -0.000000008314933, w: 0.97277904}
-  m_LocalPosition: {x: -0.21, y: 1.936, z: 5.7}
+  m_LocalRotation: {x: 0.163861, y: -0.68785876, z: 0.16386105, w: 0.6878586}
+  m_LocalPosition: {x: 1.7499999, y: 1.936, z: 7.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21342,6 +21228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1089509967
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22972,6 +22859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
 --- !u!135 &1173687890
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23963,6 +23851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1221099676
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24119,8 +24008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222192510}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2317346, y: 0.00000003562377, z: -0.000000011334079, w: 0.97277904}
-  m_LocalPosition: {x: -0.21, y: 1.936, z: 5.7}
+  m_LocalRotation: {x: 0.163861, y: -0.68785876, z: 0.16386104, w: 0.6878586}
+  m_LocalPosition: {x: 1.7499999, y: 1.936, z: 7.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24475,7 +24364,6 @@ Transform:
   - {fileID: 1733898521}
   - {fileID: 1173687894}
   - {fileID: 1385434745}
-  - {fileID: 616573922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1254685634
@@ -26478,6 +26366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1329362955
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27406,6 +27295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
 --- !u!135 &1385434741
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28853,6 +28743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1440587115
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32037,6 +31928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1640468127
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33888,6 +33780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
 --- !u!135 &1733898517
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34340,6 +34233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1747838803
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34589,6 +34483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 0}
 --- !u!135 &1765868655
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -35419,6 +35314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1841107915
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -37342,7 +37238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946540744}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.21, y: 0.946, z: 7.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37350,7 +37246,7 @@ Transform:
   - {fileID: 245813853}
   - {fileID: 352712099}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1946540746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37370,6 +37266,7 @@ MonoBehaviour:
   accelerationTime: 0.1
   turningSpeed: 2
   gravity: 9.81
+  footstepSound: {fileID: 8300000, guid: 3664d7074f21cc449937ddb7bb80baa9, type: 3}
   _animator: {fileID: 1785503117}
 --- !u!143 &1946540747
 CharacterController:
@@ -38036,6 +37933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1961607817
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38336,6 +38234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &1988996670
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -39463,6 +39362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &2088304972
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -45080,6 +44980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30b64f854ef38d478397fd816193e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectSound: {fileID: 8300000, guid: a52395c147455934daa3ff6b49ae3aab, type: 3}
 --- !u!135 &2138565500
 SphereCollider:
   m_ObjectHideFlags: 0

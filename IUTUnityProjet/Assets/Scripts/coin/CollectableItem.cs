@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
+    public AudioClip collectSound; // Référence au clip audio à jouer
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -15,7 +17,13 @@ public class CollectableItem : MonoBehaviour
         // Notifie le GameManager
         GameManager.Instance.AddCoin();
 
-        // Détruit la pièce
+        // Joue le son sans latence
+        if (collectSound != null)
+        {
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        }
+
+        // Détruit la pièce immédiatement
         Destroy(gameObject);
     }
 }
