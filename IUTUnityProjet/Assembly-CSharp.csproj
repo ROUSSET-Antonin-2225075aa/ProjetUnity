@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\projectile\Projectile.cs" />
     <Compile Include="Assets\Scripts\enemie\BasicEnemy.cs" />
+    <Compile Include="Assets\Scripts\Chest\ChestController.cs" />
     <Compile Include="Assets\SpaceSkies Free\Demo\Scripts\LookCamera.cs" />
     <Compile Include="Assets\Scripts\Menu\StartMenu.cs" />
   </ItemGroup>
